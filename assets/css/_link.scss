@@ -1,0 +1,54 @@
+.btn, a, button, [type="button"], [type="reset"], [type="submit"] {
+    font-weight: 500;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+
+    &::after {
+        border: none;
+        content: "";
+        background-image: url(/dropdown.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin: 5px 0 0 8px;
+        width: 8px;
+        height: 4px;
+    }
+}
+
+/*=============================================
+=            Buttons                          =
+=============================================*/
+
+.btn-primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+        background-color: $color-primary-darker;
+        border-color: $color-primary-darker;
+    }
+}
+
+.btn-outline-primary {
+    border-color: $color-primary-lighter;
+    color: $color-primary;
+
+    &:hover {
+        color: $color-primary-darker;
+        border-color: $color-primary-darker;
+        background-color: inherit;
+    }
+}
+
+.btn:disabled, input[type="submit"]:disabled {
+    background-color: $color-primary-lighter !important;
+    border-color: $color-primary-lighter !important;
+}
+
+/*=====  End of Buttons                ======*/
